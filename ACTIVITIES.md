@@ -8,7 +8,7 @@ Junto a esta actividad también vamos a practicar GitFlow, para eso tendrás que
 En caso de no tener configurado SSH en este mismo repoisotiro hay un documento
 que se llama CONFIG_SSH.md para configurarlo correctamente, ¡CUIDADO! ya que te descargarás la rama principal main, recuerda que cada actividad/ejercicio que hagas
 tendrás que hacaerlo en una rama independiente (no uses commit desde el IDE, tiene que ser por comandos, eso os ayudará a entender cómo funcionan),
-cada rama que crees tendrá el siguiente formato: nombre-apellidos-título-de-la-actividad, para apoyaros os comaparto cómo funciona gitflow: https://globant.udemy.com/course/git-y-github-completo-desde-cero/
+cada rama que crees tendrá el siguiente formato: nombre-apellidos-título-de-la-actividad, para apoyaros os comparto cómo funciona gitflow: https://globant.udemy.com/course/git-y-github-completo-desde-cero/
 ## 🟢 Nivel 1 – Peticiones básicas (GET)
 
 ### 1️⃣ Obtener todos los usuarios
@@ -96,7 +96,7 @@ Realiza una petición **DELETE** al endpoint `/posts/1` y valida que:
 * La **respuesta** sea un objeto vacío `{}` o no contenga cuerpo, confirmando la ejecución.
 
 ---
-## 🥋 Ejercicio Final
+## 🥋 Ejercicio Final 🏁
 
 **🎯 Objetivo:** Implementar técnicas avanzadas de automatización para optimizar la mantenibilidad y escalabilidad del framework.
 
@@ -106,21 +106,33 @@ Debes crear un flujo de pruebas que utilice:
 1.  **`Scenario Outline` y `Examples`**: Para probar el endpoint de `/users` con múltiples IDs y nombres esperados en una sola estructura.
 2.  **`call`**: Para reutilizar la lógica de creación de un post (Nivel 3) antes de intentar comentarlo o editarlo.
 3.  **`tags`**: Para categorizar las pruebas (ej: `@smoke`, `@regression`) y permitir ejecuciones selectivas.
+4.  **`tags`**: Definición de variables en el karate-config.js
+
+El objetivo de esta **actividad final** es que seáis **creativos** y apliquéis **todo lo aprendido**, junto con otros conocimientos que hayáis adquirido consultando la **documentación oficial de Karate**.
+
+La idea principal de esta actividad es que desarrolléis un **CRUD completo (Create, Read, Update, Delete)** utilizando **una API diferente** a la que hemos estado utilizando hasta ahora.
+
+### 🔌 APIs propuestas
+Os comparto algunas alternativas a la API usada en clase:
+
+- 👉 **DummyJSON**  
+  https://dummyjson.com/docs
+
+- 👉 **Swagger Petstore**  
+  https://petstore.swagger.io/
+
+- 🚀 O, si os animáis, os invito a **crear vuestra propia API** (mock o real) y utilizarla para el CRUD.
+
+### 📌 Requisitos mínimos
+- Implementar los métodos:
+    - `GET`
+    - `POST`
+    - `PUT` o `PATCH`
+    - `DELETE`
+- Usar **Karate** correctamente
+- Apoyaros en la **documentación oficial**
+- Mantener una estructura clara y ordenada de los tests
+
+¡Mucho ánimo y a por ello! 💪🥋
 
 ---
-
-### 🛠️ Ejemplo de Implementación Avanzada
-
-A continuación, se muestra cómo estructurar estas funcionalidades:
-
-#### **Reutilización (create-post.feature)**
-Este archivo servirá para ser llamado por otros escenarios.
-```cucumber
-@ignore
-Feature: Reusable Post Creator
-  Scenario:
-    Given url apiUrl
-    And path 'posts'
-    And request { title: 'Post Base', body: 'Contenido', userId: 1 }
-    When method POST
-    Then status 201
