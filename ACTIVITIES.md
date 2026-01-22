@@ -4,8 +4,8 @@ Este proyecto contiene una serie de desafíos prácticos para aprender y dominar
 Por favor, no hagas uso de la IA, ya que el objetivo de este ejercicio es que aprendas las bases de Karate.
 Recuerda que para esta actividad puedes hacer uso de la doc de Karate: https://docs.karatelabs.io/http-requests/making-requests
 
-Junto a esta actividad también vamos a practicar GitFlow, para eso tendrás que descargarte el proyecto
-desde un repositorio: git@github.com:glo-agandoy/academy-qa-karate.git, en caso de no tener configurado SSH en este mismo repoisotiro hay un documento
+Junto a esta actividad también vamos a practicar GitFlow, para eso tendrás que descargarte el proyecto. 
+En caso de no tener configurado SSH en este mismo repoisotiro hay un documento
 que se llama CONFIG_SSH.md para configurarlo correctamente, ¡CUIDADO! ya que te descargarás la rama principal main, recuerda que cada actividad/ejercicio que hagas
 tendrás que hacaerlo en una rama independiente (no uses commit desde el IDE, tiene que ser por comandos, eso os ayudará a entender cómo funcionan),
 cada rama que crees tendrá el siguiente formato: nombre-apellidos-título-de-la-actividad, para apoyaros os comaparto cómo funciona gitflow: https://globant.udemy.com/course/git-y-github-completo-desde-cero/
