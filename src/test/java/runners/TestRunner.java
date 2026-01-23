@@ -20,7 +20,7 @@ public class TestRunner {
      */
     @Karate.Test
     public Karate testRunner() {
-        Feature feature = Feature.read("classpath:features/example.feature");
-        return Karate.run().features(feature);
+        Feature featureClassPath = Feature.read("classpath:features/example.feature");
+        return Karate.run().features(featureClassPath);
     }
 }
