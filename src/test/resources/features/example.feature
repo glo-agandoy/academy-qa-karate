@@ -19,14 +19,15 @@ Feature: Example
 
   Scenario: Post post
     Given path 'posts'
-    And request
-     """
-    {
-      "title": "Karate for API testing",
-      "body": "I create my first post in Karate",
-      "userId": 1
-    }
-    """
+    * def body =
+      """
+        {
+        "title": "Karate for API testing",
+        "body": "I create my first post in Karate",
+        "userId": 1
+        }
+      """
+    And request body
     When method POST
     Then status 201
     And match response.title == body.title
