@@ -4,7 +4,7 @@ Feature: Example
     * url apiUrl
 
   Scenario: Get todos
-    Given path 'todos', '1'
+    Given path 'todos', '2'
     When method GET
     Then status 200
     And match response ==
