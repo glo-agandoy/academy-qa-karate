@@ -1,6 +1,6 @@
 Feature: Example
 
-  Background:
+  Background: My preconditions
     * url apiUrl
 
   Scenario: Get todos
