@@ -1,26 +1,10 @@
-/**
- * Reference: https://docs.karatelabs.io/core-syntax/configuration/
- * Karate configuration function.
- *
- * This function is automatically executed by Karate at the start of a test run.
- * It sets up environment-specific settings such as API URLs, users, and timeouts.
- *
- * @returns {Object} The configuration object for the current environment.
- *
- */
 function fn() {
-    /** Timeout for HTTP requests in milliseconds */
-    const TIMEOUT = 5000;
-
-    /** Environment-specific configuration */
-    const config = {
-         apiUrl: "https://jsonplaceholder.typicode.com/"
+    var config = {
+        urlBaseGoRest: 'https://gorest.co.in/public/v2',
+        tokenGoRest: 'Bearer 91657a895133a52ce4eb4a285d29c44e938521c5ab9e3ec4be536e5205385e1f'
     };
 
-    // Configure Karate HTTP timeouts
-    karate.configure('connectTimeout', TIMEOUT);
-    karate.configure('readTimeout', TIMEOUT);
+    karate.configure('ssl', true);
 
-    // Return configuration for the selected environment
-    return config
+    return config;
 }

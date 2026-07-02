@@ -1,0 +1,21 @@
+{
+  "usuarioValido": {
+    "name": "Carlos Automation",
+    "gender": "male",
+    "status": "active"
+  },
+  "datosParaActualizar": {
+    "name": "Carlos Modificado",
+    "status": "inactive"
+  },
+  "usuarioInvalido": {
+    "name": "Señor Hacker",
+    "gender": "alien",
+    "status": "desconocido"
+  },
+  "massUsers": [
+    { "name": "Alice Tester", "gender": "female", "status": "active" },
+    { "name": "Bob Automation", "gender": "male", "status": "inactive" },
+    { "name": "Charlie QA", "gender": "male", "status": "active" }
+  ]
+}
