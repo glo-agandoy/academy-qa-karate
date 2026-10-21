@@ -14,7 +14,8 @@ function fn() {
 
     /** Environment-specific configuration */
     const config = {
-         apiUrl: "https://jsonplaceholder.typicode.com/"
+         apiUrl: "https://jsonplaceholder.typicode.com/",
+         petstoreUrl: "https://petstore.swagger.io/v2/"
     };
 
     // Configure Karate HTTP timeouts
